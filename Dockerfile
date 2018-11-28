@@ -7,4 +7,11 @@ MAINTAINER NaokiKinoshita <uttnaoki@gmail.com>
 RUN apt update
 RUN apt install -y vim
 
-# RUN R -e "install.packages('exactRankTests', repos = 'http://cran.us.r-project.org')"
+# Rのパッケージをインストール
+RUN R -e "install.packages('exactRankTests', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('randomForest', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('lars', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('nnet', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('rpart', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('kernlab', repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages('caret', repos = 'http://cran.us.r-project.org')"

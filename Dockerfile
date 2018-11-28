@@ -7,6 +7,11 @@ MAINTAINER NaokiKinoshita <uttnaoki@gmail.com>
 RUN apt update
 RUN apt install -y vim
 
+# git の設定
+RUN apt install -y git
+RUN git config --global user.name uttnaoki
+RUN git config --global user.email uttnaoki@gmail.com
+
 # Rのパッケージをインストール
 RUN R -e "install.packages('exactRankTests', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('randomForest', repos = 'http://cran.us.r-project.org')"

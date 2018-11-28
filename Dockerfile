@@ -12,6 +12,9 @@ RUN apt install -y git
 RUN git config --global user.name uttnaoki
 RUN git config --global user.email uttnaoki@gmail.com
 
+# zsh
+RUN apt install -y zsh
+
 # Rのパッケージをインストール
 RUN R -e "install.packages('exactRankTests', repos = 'http://cran.us.r-project.org')"
 RUN R -e "install.packages('randomForest', repos = 'http://cran.us.r-project.org')"
